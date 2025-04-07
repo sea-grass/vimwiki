@@ -2056,7 +2056,9 @@ function! s:rss_item(path, title) abort
   let link = vimwiki#vars#get_wikilocal('base_url')
         \ . diary_rel_path
         \ . fname_base . '.html'
-  let pubdate = strftime('%a, %d %b %Y %T %z', getftime(full_path))
+
+  " TODO Format the date placeholder according to RFC822
+  let pubdate = len(converted['date']) > 0 ? converted['date'] : strftime('%a, %d %b %Y %T %z', getftime(full_path))
 
   let item_pre = [' <item>',
         \ '  <title>' . a:title . '</title>',
