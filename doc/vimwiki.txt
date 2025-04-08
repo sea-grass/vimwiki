@@ -1587,7 +1587,7 @@ It is allowed to concatenate multiple tags in one line: >
 If placed in the first two lines of a file, the whole file is tagged.  If
 placed under a header, within the 2 lines below it, the header is then tagged
 with this tag, and the tag search commands will jump to this specific header.
-Otherwise, the tag stands of its own and the search command jumps directly to
+Otherwise, the tag stands on its own and the search command jumps directly to
 it.
 
 Typing tags can be simplified by using Vim's omni completion (see
